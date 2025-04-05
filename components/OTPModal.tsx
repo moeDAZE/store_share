@@ -7,13 +7,11 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 
 import {
   InputOTP,
   InputOTPGroup,
-  InputOTPSeparator,
   InputOTPSlot,
 } from '@/components/ui/input-otp'
 import Image from 'next/image'
@@ -39,7 +37,6 @@ export default function OTPModal({
     setIsLoading(true)
 
     try {
-      //call API to verify OTP
       const sessionId = await verifySecret({ accountId, password })
       if (sessionId) router.push('/')
     } catch (error) {
@@ -50,7 +47,6 @@ export default function OTPModal({
   }
 
   const handleResendOTP = async () => {
-    //call API to resend OTP
     await sendEmailOTP({ email })
   }
 

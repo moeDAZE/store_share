@@ -37,13 +37,13 @@ export default function ActionsDropdown({ file }: { file: Models.Document }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [action, setAction] = useState<ActionType | null>(null)
 
-  //用于重命名
+  // 用于重命名
   const [name, setName] = useState(file.name)
 
   const [isLoading, setIsLoading] = useState(false)
   const path = usePathname()
 
-  //用于分享
+  // 用于分享
   const [emails, setEmails] = useState<string[]>([])
 
   const closeAllModals = () => {
@@ -51,7 +51,6 @@ export default function ActionsDropdown({ file }: { file: Models.Document }) {
     setIsDropdownOpen(false)
     setIsLoading(false)
     setAction(null)
-    //setEmails
   }
 
   const handleActions = async () => {
@@ -72,7 +71,7 @@ export default function ActionsDropdown({ file }: { file: Models.Document }) {
     setIsLoading(false)
   }
 
-  //用于共享
+  // 用于共享
   const handleRemoveUser = async (email: string) => {
     const updatedEmails = emails.filter((e) => e !== email)
     const success = await updateFileUsers({

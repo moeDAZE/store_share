@@ -6,6 +6,8 @@ import { redirect } from 'next/navigation'
 import React from 'react'
 import { Toaster } from '@/components/ui/toaster'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Layout({
   children,
 }: {

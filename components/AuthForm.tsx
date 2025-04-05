@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -89,7 +88,6 @@ export default function AuthForm({ type }: { type: FormType }) {
                     </FormControl>
                   </div>
                   <FormMessage className="shad-form-message" />
-                  {/*<FormDescription>这是你的用户名</FormDescription>*/}
                 </FormItem>
               )}
             ></FormField>
@@ -110,7 +108,6 @@ export default function AuthForm({ type }: { type: FormType }) {
                   </FormControl>
                 </div>
                 <FormMessage className="shad-form-message" />
-                {/*<FormDescription>这是你的用户名</FormDescription>*/}
               </FormItem>
             )}
           ></FormField>
